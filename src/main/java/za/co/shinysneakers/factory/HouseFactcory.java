@@ -32,4 +32,12 @@ public class HouseFactcory {
                 .setPostalCode(postalCode)
                 .build();
     }
+    public static House validateStretNumbuber(short streetNumber){
+        if(Helper.isValidStreetNumber(streetNumber)){
+            return null;
+        }
+        return new House.Builder()
+                .setStreetNumber(streetNumber)
+                .build();
+    }
 }
