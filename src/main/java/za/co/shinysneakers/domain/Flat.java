@@ -90,6 +90,7 @@ public class Flat extends Address{
             this.city = flat.city;
             this.province = flat.province;
             this.postalCode = flat.postalCode;
+
             return this;
 
         }
