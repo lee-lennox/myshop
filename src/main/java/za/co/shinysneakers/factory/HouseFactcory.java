@@ -40,4 +40,13 @@ public class HouseFactcory {
                 .setStreetNumber(streetNumber)
                 .build();
     }
+    public static House validteErfNumber(short erfNumber){
+        if(Helper.isValidErfNumber(erfNumber)){
+            return null;
+
+        }
+        return new House.Builder()
+                .setErfNumber(erfNumber)
+                .build();
+    }
 }
