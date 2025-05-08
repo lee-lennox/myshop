@@ -36,4 +36,12 @@ public class FlatFactory {
                 .setPostalCode(postalCode)
                 .build();
     }
+    public static Flat validateStretNumbuber(short streetNumber){
+        if(Helper.isValidStreetNumber(streetNumber)){
+            return null;
+        }
+        return new Flat.Builder()
+                .setStreetNumber(streetNumber)
+                .build();
+    }
 }
