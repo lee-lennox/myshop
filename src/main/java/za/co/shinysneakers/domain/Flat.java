@@ -10,6 +10,12 @@ public class Flat extends Address{
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
     }
 
+    public Flat(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, short uniNumber, String flatName) {
+        super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
+        this.uniNumber = uniNumber;
+        this.flatName = flatName;
+    }
+
     public Flat(Builder builder) {
         super(builder.build().addressId, builder.streetName,builder.streetNumber,
                 builder.suburb,builder.city,
@@ -57,6 +63,10 @@ public class Flat extends Address{
             this.flatName = flatName;
             return this;
         }
+        public Builder setStreetName(String streetName) {
+            this.streetName = streetName;
+            return this;
+        }
 
         public Builder setStreetNumber(short streetNumber) {
             this.streetNumber = streetNumber;
@@ -85,6 +95,7 @@ public class Flat extends Address{
         public Builder copy(Flat flat) {
             this.uniNumber = flat.uniNumber;
             this.flatName = flat.flatName;
+            this.streetName=flat.streetName;
             this.streetNumber = flat.streetNumber;
             this.suburb = flat.suburb;
             this.city = flat.city;
