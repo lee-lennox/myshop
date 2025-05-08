@@ -3,16 +3,16 @@ package za.co.shinysneakers.domain;
 public class House extends Address{
     protected int erfNumber;
 
-    public House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, int erfNumber) {
+    protected House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, int erfNumber) {
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
         this.erfNumber = erfNumber;
     }
 
-    public House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode) {
+    protected House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode) {
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
     }
 
-    public House(Builder builder) {
+    protected House(Builder builder) {
         super(builder.addressId, builder.streetName,
                 builder.streetNumber,builder.suburb,
                 builder.city,builder.province, builder.postalCode);
