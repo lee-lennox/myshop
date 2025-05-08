@@ -8,9 +8,9 @@ public class House extends Address{
         this.erfNumber = erfNumber;
     }
 
-//    public House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode) {
-//        super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
-//    }
+    public House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode) {
+        super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
+    }
 
     public House(Builder builder) {
         super(builder.addressId, builder.streetName,
