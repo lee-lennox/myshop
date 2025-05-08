@@ -28,4 +28,12 @@ public class FlatFactory {
                 .setProvince(province)
                 .build();
     }
+    public static Flat validtePostalCode(short postalCode){
+        if(Helper.isValidPostalCode(postalCode)){
+            return null;
+        }
+        return new Flat.Builder()
+                .setPostalCode(postalCode)
+                .build();
+    }
 }
