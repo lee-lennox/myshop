@@ -5,18 +5,18 @@ public class Flat extends Address{
     protected String flatName;
 
 
-    public Flat(long addressId, String streetName, short streetNumber, String suburb,
+    protected Flat(long addressId, String streetName, short streetNumber, String suburb,
                 String city, String province, short postalCode) {
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
     }
 
-    public Flat(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, short uniNumber, String flatName) {
+    protected Flat(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, short uniNumber, String flatName) {
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
         this.uniNumber = uniNumber;
         this.flatName = flatName;
     }
 
-    public Flat(Builder builder) {
+    protected Flat(Builder builder) {
         super(builder.build().addressId, builder.streetName,builder.streetNumber,
                 builder.suburb,builder.city,
                 builder.province,builder.postalCode);
