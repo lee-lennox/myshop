@@ -3,6 +3,10 @@ package za.co.shinysneakers.domain;
 public class House extends Address{
     protected int erfNumber;
 
+    public House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, int erfNumber) {
+        super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
+        this.erfNumber = erfNumber;
+    }
 
     public House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode) {
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
@@ -41,6 +45,7 @@ public class House extends Address{
         protected String city;
         protected String province;
         protected short postalCode;
+        protected int erfNumber;
 
         public Builder setAddressId(long addressId) {
             this.addressId = addressId;
@@ -76,6 +81,12 @@ public class House extends Address{
             this.streetName = streetName;
             return this;
         }
+
+        public Builder setErfNumber(int erfNumber) {
+            this.erfNumber = erfNumber;
+            return this;
+        }
+
         public Builder copy(House house) {
             this.addressId = house.addressId;
             this.streetName = house.streetName;
@@ -84,6 +95,7 @@ public class House extends Address{
             this.city = house.city;
             this.province = house.province;
             this.postalCode = house.postalCode;
+            this.erfNumber = house.erfNumber;
             return this;
         }
         public House build() {
