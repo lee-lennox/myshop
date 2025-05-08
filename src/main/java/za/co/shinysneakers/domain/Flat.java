@@ -1,7 +1,7 @@
 package za.co.shinysneakers.domain;
 
 public class Flat extends Address{
-    protected short uniNumber;
+    protected short unitNumber;
     protected String flatName;
 
 
@@ -12,7 +12,7 @@ public class Flat extends Address{
 
     protected Flat(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, short uniNumber, String flatName) {
         super(addressId, streetName, streetNumber, suburb, city, province, postalCode);
-        this.uniNumber = uniNumber;
+        this.unitNumber = uniNumber;
         this.flatName = flatName;
     }
 
@@ -23,7 +23,7 @@ public class Flat extends Address{
     }
 
     public short getUniNumber() {
-        return uniNumber;
+        return unitNumber;
     }
 
     public String getFlatName() {
@@ -33,7 +33,7 @@ public class Flat extends Address{
     @Override
     public String toString() {
         return "Flat{" +
-                "uniNumber=" + uniNumber +
+                "uniNumber=" + unitNumber +
                 ", flatName='" + flatName + '\'' +
                 ", addressId=" + addressId +
                 ", streetNumber=" + streetNumber +
@@ -45,7 +45,7 @@ public class Flat extends Address{
                 '}';
     }
     public static class Builder {
-        protected short uniNumber;
+        protected short unitNumber;
         protected String streetName;
         protected String flatName;
         protected short streetNumber;
@@ -54,8 +54,8 @@ public class Flat extends Address{
         protected String province;
         protected short postalCode;
 
-        public Builder setUniNumber(short uniNumber) {
-            this.uniNumber = uniNumber;
+        public Builder setUnitNumber(short uniNumber) {
+            this.unitNumber = uniNumber;
             return this;
         }
 
@@ -93,7 +93,7 @@ public class Flat extends Address{
             return this;
         }
         public Builder copy(Flat flat) {
-            this.uniNumber = flat.uniNumber;
+            this.unitNumber = flat.unitNumber;
             this.flatName = flat.flatName;
             this.streetName=flat.streetName;
             this.streetNumber = flat.streetNumber;
