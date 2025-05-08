@@ -44,4 +44,13 @@ public class FlatFactory {
                 .setStreetNumber(streetNumber)
                 .build();
     }
+    public static Flat validteErfNumber(short unitNumber){
+        if(Helper.isValidUnitNumber(unitNumber)){
+            return null;
+
+        }
+        return new Flat.Builder()
+                .setUnitNumber(unitNumber)
+                .build();
+    }
 }
