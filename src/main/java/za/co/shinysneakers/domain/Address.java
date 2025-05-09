@@ -19,6 +19,11 @@ public class Address {
         this.postalCode = postalCode;
     }
 
+    protected Address() {
+
+    }
+
+
     public long getAddressId() {
         return addressId;
     }
