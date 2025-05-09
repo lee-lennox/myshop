@@ -1,6 +1,10 @@
 package za.co.shinysneakers.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+@Entity
 public class Flat extends Address{
+    @Id
     protected short unitNumber;
     protected String flatName;
 
@@ -20,6 +24,10 @@ public class Flat extends Address{
         super(builder.build().addressId, builder.streetName,builder.streetNumber,
                 builder.suburb,builder.city,
                 builder.province,builder.postalCode);
+    }
+
+    protected Flat() {
+
     }
 
     public short getUniNumber() {
