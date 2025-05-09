@@ -1,6 +1,11 @@
 package za.co.shinysneakers.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class House extends Address{
+    @Id
     protected int erfNumber;
 
     protected House(long addressId, String streetName, short streetNumber, String suburb, String city, String province, short postalCode, int erfNumber) {
@@ -16,6 +21,10 @@ public class House extends Address{
         super(builder.addressId, builder.streetName,
                 builder.streetNumber,builder.suburb,
                 builder.city,builder.province, builder.postalCode);
+    }
+
+    protected House() {
+
     }
 
 
